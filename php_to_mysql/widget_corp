@@ -1,0 +1,111 @@
+
+create database widget_corp;
+use widget_corp;
+SET SQL_SAFE_UPDATES = 0;
+
+drop table subjects;
+create table subjects (
+id int(11) not null auto_increment,
+menu_name varchar(30) not null,
+position int(3) not null,
+visible tinyint(1) not null,
+primary key (id) 
+); 
+show tables;
+show columns from subjects;
+show columns from admins;
+SHOW FIELDS FROM admins;
+
+ 
+
+# Select Data
+select * from subjects;
+select * from admins;
+
+
+# Delete
+delete from subjects where id = 29;
+
+insert into subjects (menu_name, position, visible)
+values ('About Widget Corp', 1, 1);
+select * from subjects;
+insert into subjects (menu_name, position, visible)
+values ('Products', 2, 1);
+insert into subjects (menu_name, position, visible)
+values ('Services', 3, 1);
+insert into subjects (menu_name, position, visible)
+values ('Today\'s Widget Trivia', 4, 1);
+
+select * from subjects where visible = 1;
+select * from subjects where visible = 0;
+select * from subjects where visible = 1 order by position asc;
+select * from subjects where visible = 1 order by position desc;
+select * from subjects where visible = 1 order by menu_name desc;
+select * from subjects where visible = 1 order by menu_name asc;
+select * from subjects where id = 26;
+select menu_name, position from subjects where visible = 1;
+update subjects
+set visible = 1
+where id = 28;
+
+select * from subjects;
+
+update subjects
+set visible = 0;
+
+
+update subjects
+set visible = 1
+where id < 28;
+select * from subjects;
+
+
+# create new table
+drop table pages;
+create table pages ( 
+id int(11) not null auto_increment,
+subject_id int(11) not null,
+menu_name varchar(30) not null,
+position int(30) not null,
+visible tinyint(1) not null,
+content text,
+primary key (id),
+index (subject_id)
+);
+
+show tables;
+show columns from pages;
+
+insert into pages (subject_id, menu_name, position,visible, content)
+values (1, 'Our mission', 1, 1, 'our mission has always been..');
+
+insert into pages (subject_id, menu_name, position,visible, content)
+values (1, 'Our history', 2, 1, 'our history was..');
+
+insert into pages (subject_id, menu_name, position,visible, content)
+values (2, 'Large widgets', 2, 1, 'our large widges have to be seen to be believed..');
+
+insert into pages (subject_id, menu_name, position,visible, content)
+values (2, 'Small widgets', 1, 1, 'they say big things come in small package..');
+
+insert into pages (subject_id, menu_name, position,visible, content)
+values (3, 'Retrofitting', 1, 1, 'we love to replace widgets..');
+
+insert into pages (subject_id, menu_name, position,visible, content)
+values (3, 'Certification', 2, 1, 'we can certify any, not just our own..');
+
+
+select * from pages ;
+select * from subjects;
+
+select * from pages where id = 1;
+select * from subjects where id = 1;
+select * from pages where id = 3;
+select * from pages where subject_id = 3;
+delete from pages where menu_name = 'our history';
+
+create database ctu_db;
+
+SELECT * from pages;
+SELECT * from subjects;
+

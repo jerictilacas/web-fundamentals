@@ -1,0 +1,70 @@
+use ctu_db;
+SELECT * FROM ctu_db.students;
+SELECT * FROM ctu_db.subjects;
+SELECT * FROM ctu_db.student_subjects
+order by student_subjects.student_id asc;
+
+
+# ramel: 1
+# subjects: 2, 3
+
+# brylle: 3
+# subjects: 1, 2, 3
+
+
+;
+
+select student_subjects.student_id,
+student_subjects.subject_id,
+subjects.subject_name
+ from student_subjects
+	left join subjects on subjects.subject_id = student_subjects.subject_id
+ where student_id = 3
+;
+
+
+
+# problem 1: Add subject math and scient for student regner
+INSERT INTO `ctu_db`.`student_subjects` (`student_id`, `subject_id`) VALUES ('2', '1');
+INSERT INTO `ctu_db`.`student_subjects` (`student_id`, `subject_id`) VALUES ('2', '3');
+# problem 2: Add new Subject Filipino
+INSERT INTO `ctu_db`.`subjects` (`subject_id`, `subject_name`) VALUES ('4', 'filipino');
+
+# problem 3: Add ramel and brylle for subject filipino
+INSERT INTO `ctu_db`.`student_subjects` (`student_id`, `subject_id`) VALUES ('1', '4');
+INSERT INTO `ctu_db`.`student_subjects` (`student_id`, `subject_id`) VALUES ('3', '4');
+
+# problem 4: get students that has the subject of filipino
+# display columns: student_id, subject_id, first_name, subject_name
+select student_subjects.student_id,
+student_subjects.subject_id,
+subject_name,
+students.first_name
+ from student_subjects
+	left join students on students.student_id = student_subjects.student_id
+	left join subjects on subjects.subject_id = student_subjects.subject_id
+ where student_subjects.subject_id = 4
+;
+
+# problem 5: get all ramel's subjects
+# display columns: student_id, subject_name
+select student_subjects.student_id,
+subjects.subject_name,
+students.first_name
+ from student_subjects
+	left join subjects on subjects.subject_id = student_subjects.subject_id
+	left join students on students.student_id = student_subjects.student_id
+where student_subjects.student_id = 1
+;
+# problem 6: get all regner and brylle subjects 
+# display columns: student_id, first_name, subject_name
+select student_subjects.student_id,
+subjects.subject_name,
+students.first_name
+ from student_subjects
+	left join subjects on subjects.subject_id = student_subjects.subject_id
+	left join students on students.student_id = student_subjects.student_id
+where student_subjects.student_id = 2 or student_subjects.student_id = 3
+;
+
+select * from widget_corp.subjects;

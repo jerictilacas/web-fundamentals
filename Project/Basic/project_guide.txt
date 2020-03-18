@@ -1,0 +1,17 @@
+// login_form.php
+
+// if log in already, redirect to dashboard.php
+
+field -> username
+field -> password
+button -> Submit
+
+
+// formprocess.php
+
+if correct, then redirect to dashboard.php
+if not, return to login_form.php and populate fields
+
+// dashboard.php
+
+display: You are in admin area.

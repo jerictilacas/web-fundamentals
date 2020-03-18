@@ -1,0 +1,44 @@
+# Fundamentals
+Next Chapter: Mysql Basics
+
+
+"first project"
+login page
+-form
+    -username
+    -password
+
+Admin Menu
+"welcome to the admin area"
+    -management websites content
+        -navigation
+        -subjects CRUD
+        -pages CRUD
+
+    -manage admins users
+        -admins CRUD
+
+    -logout
+        -do logout
+        -back to login
+
+public area
+-site pages
+    -navigation
+    -page content
+    -read only
+
+widget corp
+-about widget corp
+    -our mission(subject1)
+        -"our mission has always been...."
+    -our history(subject2)
+        -"founded in 1998 by two enterprising engineers...."
+
+-products
+    -large widgets
+    -small widgets
+
+-services
+    -RETROFITTING
+

@@ -1,0 +1,285 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+}
+
+a{
+    color: #0000ab;
+}
+
+a:hover{
+    color: #000041;
+}
+.margin-zero{
+    margin: 0;
+}
+button{
+    margin-top: 42px;
+    margin-left: 68px;
+    display: block;
+    border-radius: 10%;
+}
+button:hover{
+    background-color: #7e7eb0;
+}
+.button{
+    margin-top: 10px;
+}
+
+[hidden]{
+    display : none;
+}
+
+.float-left{
+    float: left;
+}
+
+/*====================== Scaffolding */
+.row > div {
+    padding: 10px;
+    float: left;
+}
+
+.column-2 {
+    width: 16.665%;
+}
+
+.column-3 {
+    width: 25%;
+}
+
+.column-4 {
+    width: 33.33%;
+}
+.column-5 {
+    width: 41.6666666667%;
+}
+
+.column-6 {
+    width: 50%;
+}
+.column-6 {
+    width: 50%;
+}
+.column-7 {
+    width: 58.3333333333%;
+}
+.column-8 {
+    width: 66.6666666667%;
+}
+.column-9 {
+    width: 75%;
+}
+
+.column-11 {
+    width: 91.6666666667%;
+}
+.column-12 {
+    width: 100%;
+}
+
+
+/*====================== Helpers */
+
+.img-responsive {
+    width: 100%;
+}
+
+.text-left {
+    text-align: left;
+}
+.text-center {
+    text-align: center;
+}
+.right {
+    float:right;
+}
+
+/*====================== Cleafixes */
+
+.clearfix:after,
+.row:after,
+#main:after,
+#header:after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0;
+}
+
+#page-inner {
+    width: 960px;
+    margin-left: auto;
+    margin-right: auto;
+}
+#header{
+    background: #202f45;
+    padding: 0 0 6px 6px;/*Top Right Bottom Left*/
+    border-radius: 6px;
+}
+    #header .search-box {
+        margin-bottom: 10px;
+        color: white;
+    }
+
+    #header .search-box,
+    #header .ul-main-menu {
+        float: right;
+    }
+
+    #header.header-fixed {
+        position: fixed;
+        width: 960px;
+        left: 50%;
+        transform: translateX(-50%);
+        top: 0;
+    }
+
+    #header.header-fixed + #main  {
+        margin-top: 116px;
+    }
+
+#main{
+    background: #d9d9d9;
+    margin-top: 20px;
+    padding:12px;
+    border-radius: 6px;
+}
+
+input[type=submit] {
+    border-radius: 2px;
+    border: 1px solid #4a5b62;
+    padding: 4px 16px;
+    background: #3e4d54;
+    color: white;
+}
+input[type=submit]:hover {
+    background: #48585f;
+}
+/*====================== Logo */
+
+.logo {
+    float: left;
+    background: url(https://goo.gl/zT2YeK) no-repeat;
+    background-size: 60px;
+    background-position-y: 5px;
+    height: 72px;
+    padding-top: 13px;
+    text-indent: 67px;
+}
+    .logo > span {
+        color: white;
+        font-size: 34px;
+        font-weight: bold;
+        display: inline-block;
+        float: left;
+    }
+
+
+.image-store {
+    float: right;
+    background: url(https://goo.gl/y2tYd5) no-repeat;
+    background-size: 126px;
+    background-position-y: 5px;
+    height: 131px;
+    padding: 13px;
+}
+
+
+
+/*Mod: Ul*/
+
+.ul-nav-1 {
+    padding: 0;
+}
+    .ul-nav-1 li {
+        list-style: none;
+        margin-bottom: 8px;
+        text-decoration: none;
+    }
+
+.ul-inline {
+    padding: 0;
+    display: inline-block;
+    margin: 0;
+}
+    .ul-inline:after {
+        visibility: hidden;
+        display: block;
+        font-size: 0;
+        content: " ";
+        clear: both;
+        height: 0;
+    }
+
+    .ul-inline li {
+        list-style: none;
+        float: left;
+    }
+
+    .ul-inline li a {
+        display: block;
+    }
+
+.ul-main-menu {}
+    .ul-main-menu li {
+        margin-left: 3px;
+    }
+    .ul-main-menu li a {
+        border-radius: 8px 8px 0 0;
+        padding: 10px;
+        background: #3e4d54;
+        text-decoration: none ;
+        color: #fff;
+    }
+
+    .ul-main-menu li a:hover {
+        background-color: #556b72;
+        color: #2c0008;
+        text-decoration: none;
+    }
+
+.ul-simple {
+    margin-bottom: 10px;
+}
+    .ul-simple li {
+        margin-left: 3px;
+    }
+    .ul-simple li a {
+        padding: 0 10px;
+        text-decoration: none ;
+    }
+
+    .ul-simple li a:hover {
+        color: #2c0008;
+        text-decoration: none;
+    }
+
+#footer{
+    text-align: center;
+}
+
+/*sample for js */
+
+h1{
+    font-size: 30px;
+    margin-top: 50px;
+    margin-bottom: 0;
+
+}
+
+.example{
+    color: #3e4d54;
+    text-align: right;
+}
+
+.formHidden{
+    background: #dcbcbc;
+    margin-top: 20px;
+    padding:12px;
+    border-radius: 6px;
+}

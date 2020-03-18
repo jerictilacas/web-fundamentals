@@ -1,0 +1,27 @@
+body {
+  margin: 0;
+  background-color: #0759bd;
+}
+
+a{
+  list-style: none;
+  text-decoration: none;
+  color: $primary-color;
+  display: block;
+  font-size: 14px;
+
+  &:hover{
+    text-decoration: none;
+    color: $primary-color;
+  }
+
+  &:focus {
+    color: $primary-color;
+    text-decoration: none;
+  }
+}
+
+span{
+  display: block;
+}
+

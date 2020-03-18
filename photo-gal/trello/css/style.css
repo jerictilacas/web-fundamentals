@@ -1,0 +1,127 @@
+body {
+  margin: 0;
+  background-color: #0759bd; }
+
+a {
+  list-style: none;
+  text-decoration: none;
+  color: rgba(46, 46, 49, 0.88);
+  display: block;
+  font-size: 14px; }
+  a:hover {
+    text-decoration: none;
+    color: rgba(46, 46, 49, 0.88); }
+  a:focus {
+    color: rgba(46, 46, 49, 0.88);
+    text-decoration: none; }
+
+span {
+  display: block; }
+
+.container {
+  width: 100%; }
+
+.main {
+  background: #d7d7d7;
+  width: 200px;
+  padding: 6px;
+  margin-top: 30px;
+  border-radius: 3px;
+  margin-left: 6px; }
+  .main a {
+    font-size: 14px;
+    color: #939393; }
+  .main a:hover {
+    text-decoration: underline;
+    color: #939393; }
+
+.main-menu {
+  position: relative;
+  padding: 3px 6px;
+  width: 100%;
+  background: white;
+  border-radius: 3px;
+  margin-bottom: 6px; }
+  .main-menu:hover {
+    background: #ebebeb; }
+  .main-menu i {
+    display: none;
+    padding: 3px; }
+  .main-menu:hover i {
+    display: block; }
+
+.dropdown-menu-style {
+  top: -2px;
+  width: 100%;
+  padding: 6px 3px; }
+  .dropdown-menu-style textarea {
+    width: 100%;
+    height: 78px;
+    border: none;
+    resize: none; }
+    .dropdown-menu-style textarea:focus {
+      outline: none; }
+  .dropdown-menu-style button {
+    position: absolute;
+    margin-top: 20px;
+    margin-left: -3px;
+    border-radius: 3px;
+    background-color: white; }
+    .dropdown-menu-style button:hover {
+      background-color: #b4b4b4; }
+  .dropdown-menu-style ul {
+    position: absolute;
+    margin-left: 190px;
+    list-style: none;
+    width: 100px;
+    padding: 0; }
+    .dropdown-menu-style ul li {
+      display: inline-block; }
+      .dropdown-menu-style ul li a {
+        border: 1px solid rgba(0, 0, 0, 0.46);
+        padding: 3px 6px;
+        background-color: rgba(0, 0, 0, 0.46);
+        margin-bottom: 4px;
+        border-radius: 3px;
+        display: inline-block;
+        color: white;
+        font-size: 10px; }
+        .dropdown-menu-style ul li a:hover {
+          border: 1px solid rgba(0, 0, 0, 0.8);
+          background-color: rgba(0, 0, 0, 0.8);
+          text-decoration: none;
+          color: white;
+          margin-left: 6px; }
+
+body.is-menu-open:after {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 80;
+  opacity: .6;
+  background-color: black; }
+
+body.is-menu-open .main {
+  display: block; }
+
+.ul-menu {
+  position: absolute;
+  margin-left: 200px; }
+
+.float-none {
+  float: none; }
+
+.float-right {
+  float: right; }
+
+.float-left {
+  float: left; }
+
+.text-highlight {
+  color: rgba(46, 46, 49, 0.88); }
+
+.line-bottom {
+  border-bottom: 1px solid #f5e5b7; }
