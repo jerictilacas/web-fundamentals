@@ -3,7 +3,8 @@
 
 $count = 0;
 $line = 1;
-while ($count <= 30){
+while ($count <= 30)
+{
     echo $count . ", ";
     $count += $line;
     $line ++;

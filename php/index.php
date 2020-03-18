@@ -128,8 +128,8 @@ implode: <?php echo $num_string = implode(", ", $numbers);?><br/>
  <br/>
 
  <?php
-    $var1 = 3;
-    if(is_float($var1)){
+    $is_float = 3;
+    if(is_float($is_float)){
      echo "it is a float";
  }
  else{
@@ -142,7 +142,44 @@ implode: <?php echo $num_string = implode(", ", $numbers);?><br/>
  echo MAX_WIDTH;
  ?><br/>
 
+<br/>
+<?php
+    $var1 = null;
+    $var2 = '';
+    $var3 = 0;
+?>
+    var1 = null? <?php echo is_null($var1); ?><br>
+    var2 = null? <?php echo is_null($var2); ?><br>
+    var3 = null? <?php echo is_null($var3); ?><br><br>
+
+    var1 = set? <?php echo isset($var1); ?><br>
+    var2 = set? <?php echo isset($var2); ?><br>
+    var3 = set? <?php echo isset($var3); ?><br><br>
+
+    var1 = empty? <?php echo empty($var1); ?><br>
+    var2 = empty? <?php echo empty($var2); ?><br>
+    var3 = empty? <?php echo empty($var3); ?><br>
 
 
+ <h2>Type Juggling</h2>
+ <?php $count = "3"; ?>
+ type is : <?php echo gettype($count); ?><br>
+ <?php $count += 5; ?>
+ type is : <?php echo gettype($count); ?><br>
+ <?php $cats = "I have" . $count . "cats."; ?>
+ type is: <?php echo gettype($cats); ?>
 
+ <h2>Type Casting</h2>
+ <?php settype($count, "integer"); ?>
+ count: <?php echo gettype($count); ?><br>
 
+ <?php $count2 = (string) $count; ?>
+ count: <?php echo gettype($count); ?><br>
+ count: <?php echo gettype($count2); ?><br><br>
+
+ <?php $test1 = 3; ?>
+ <?php $test2 = 3; ?>
+ <?php settype($test1, "string"); ?>
+ <?php (string) $test2; ?>
+ test1 = <?php echo gettype($test1); ?><br>
+ test1 = <?php echo gettype($test2); ?><br>

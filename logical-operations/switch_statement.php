@@ -1,5 +1,5 @@
 <?php
-$a = 6;
+$a = 1;
 switch ($a){
     case 0:
         echo "a equal 0 <br/>";
@@ -20,7 +20,7 @@ switch ($a){
 
 <?php
 //chinese zodiac
-$year = 1995;
+$year = 1998;
 switch (($year-4)%12) {
     case 0: $Zodiac = "Rat"; break;
     case 1: $Zodiac = "Ox"; break;
@@ -39,13 +39,13 @@ echo "{$year} is the year of the {$Zodiac}";
 ?><br/>
 
 <?php
-$user_type = "press";
+$user_type = "student";
 switch ($user_type) {
     case "student":
-        echo "Welcome!"; break;
+        echo "Welcome Motherf*cker!"; break;
     case "press":
     case "customer":
     case "admin":
-        echo "Hello!"; break;
+        echo "Hello Motherf*cker!"; break;
 }
 ?>
