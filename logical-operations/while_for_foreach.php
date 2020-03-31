@@ -1,5 +1,5 @@
 
-<?php // while loops
+<?php // while loops [skipped ]
 
 $count = 0;
 $line = 1;
@@ -33,9 +33,9 @@ foreach ($ages as $age){
 
 <?php // for each loops
 $person = array (
-    "first_name" => "Ronel",
-    "last_name" => "Atillo",
-    "adress" => "214 St. dffdfdf",
+    "first_name" => "missu",
+    "last_name" => "ghorl",
+    "address" => "214 St. Maghayup",
     "city" => "Cebu",
     "state" => "AT",
     "code" => "90232"

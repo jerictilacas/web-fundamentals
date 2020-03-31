@@ -106,7 +106,7 @@
 
  <h2>Associative Arrays</h2>
 
- <?php $assoc = array ("first_name" => "Ramel", "last_name" => "Atillo");?>
+ <?php $assoc = array ("first_name" => "Jolina", "last_name" => "Mylove");?>
  <?php echo $assoc ["first_name"];?><br/>
  <?php echo $assoc ["first_name"]." ".$assoc ["last_name"];?><br/>
  <br/>

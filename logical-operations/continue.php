@@ -9,7 +9,7 @@ for ($count = 0; $count <= 10; $count++){
 
 ?><br/>
 
-<?php
+<?php // loop inside a loop with continue
 for ($a = 0; $a <= 5; $a ++)
 {
     if ($a % 2 == 0)
@@ -22,4 +22,21 @@ for ($a = 0; $a <= 5; $a ++)
     }
 }
 ?>
+
+
+<?php
+
+for ($i=0; $i <= 10; $i++)
+{
+    if ($i % 2 == 0)
+    {
+        echo $i . " is an even number" . "<br>";
+    }
+    else
+    {
+        echo $i . " is an odd number" . "<br>";
+    }
+}
+?>
+
 
